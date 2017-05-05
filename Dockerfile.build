@@ -1,0 +1,16 @@
+FROM alpine
+
+LABEL app="build-poc-go-kinesis"
+LABEL REPO="https://github.com/superliuwr/poc-go-kinesis"
+
+ENV GOROOT=/usr/lib/go \
+    GOPATH=/gopath \
+    GOBIN=/gopath/bin \
+    PROJPATH=/gopath/src/github.com/superliuwr/poc-go-kinesis
+
+# Because of https://github.com/docker/docker/issues/14914
+ENV PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+WORKDIR /gopath/src/github.com/superliuwr/poc-go-kinesis
+
+CMD ["make","build-alpine"]
