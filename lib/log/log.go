@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/superliuwr/poc-go-kinesis/config"
+	"poc-go-kinesis/lib/config"
 )
 
 // Logger defines a set of methods for writing application logs. Derived from and

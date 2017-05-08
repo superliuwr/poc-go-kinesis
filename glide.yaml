@@ -2,3 +2,5 @@ package: github.com/superliuwr/poc-go-kinesis
 import:
 - package: github.com/spf13/viper
 - package: github.com/Sirupsen/logrus
+- package: github.com/aws/aws-sdk-go
+  version: v1.8.20
